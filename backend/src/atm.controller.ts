@@ -1,6 +1,6 @@
 import { Controller, Get, HttpCode, Param } from '@nestjs/common';
 import { AtmService } from './atm.service';
-import { WithdrawResult } from './interfaces/withdraw-result.interface';
+import { WithdrawResult } from './interfaces/withdraw-result.interface'
 
 @Controller('atm')
 export class AtmController {
@@ -8,7 +8,7 @@ export class AtmController {
 
   @Get('/withdraw/:amount')
   @HttpCode(200)
-  withdraw(@Param('amount') amount: number): WithdrawResult[] {
+  withdraw(@Param('amount') amount: number): WithdrawResult {
     return this._atmService.withdrawAmount(amount)
   }
 }
