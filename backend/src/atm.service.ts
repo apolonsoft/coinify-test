@@ -24,13 +24,12 @@ export class AtmService implements OnApplicationBootstrap {
 
         return {
             coins: resultCoinsArray,
-            message: resultCoinsArray.length === 0 ? 'Insufficient Bank Notes or Coins' : ''
+            message: resultCoinsArray.length === 0 ? 'Insufficient Bank Notes or Coins' : null
         };
     }
 
     private _calculateWithdraw(coinAmountsArray: Coin[], requestedAmount: number): WithdrawCoin[] {
         let finalResult: WithdrawCoin[] = [];
-
         for (let i = 0; i < coinAmountsArray.length; i++) {
             const { amount, remainingCount } = coinAmountsArray[i];
             let requestedCoinCount = Math.floor(requestedAmount / amount);
