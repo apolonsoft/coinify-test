@@ -13,10 +13,10 @@ export class AtmService implements OnApplicationBootstrap {
         this.withdrawAmount(19421);
     }
 
-    withdrawAmount(amount: number) {
+    withdrawAmount(amount: number):WithdrawResult[] {
         const coins = this._allCoins.filter(c => c.remainingCount > 0);
-        const res = this._calculateWithdraw(coins, amount);
-        console.log(res)
+        const WithdrawResultArray =  this._calculateWithdraw(coins, amount);
+        return WithdrawResultArray
     }
 
     private _calculateWithdraw(coinAmountsArray: Coin[], amount: number): WithdrawResult[] {
