@@ -82,13 +82,15 @@ export default function Home() {
       {
         Object.keys(withdrawCoins).map(function (key, index) {
           return (<Typography
+            key={index}
             variant="h6"
             color="green"
             component="h2"
           >
-            Paybox : {key} will Pay : 
+            Paybox : {key} will Pay :
 
-            {withdrawCoins[key].map(itm => (<Typography
+            {withdrawCoins[key].map((itm, idx) => (<Typography
+              key={idx}
               variant="h8"
               color="textSecondary"
               component="h4"
