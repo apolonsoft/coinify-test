@@ -3,5 +3,6 @@ export interface Coin {
     amount: number
     remainingCount: number
     type: CoinType,
-    payoutBox?: number
+    payoutBox: string
+    payoutBoxNum: number
 }

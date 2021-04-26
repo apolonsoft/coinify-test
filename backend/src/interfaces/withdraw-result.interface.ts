@@ -1,6 +1,6 @@
 import { WithdrawCoin } from "./withdraw-coin.interface";
 
 export interface WithdrawResult {
-    coins: WithdrawCoin[],
+    withdraw: WithdrawCoin[],
     message: string
 }

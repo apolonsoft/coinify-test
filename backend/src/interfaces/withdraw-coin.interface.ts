@@ -1,6 +1,8 @@
-import { Coin } from "./coin.interface";
+import { CoinType } from "src/enums/coin-type.enum";
 
 export interface WithdrawCoin {
-    coin: Coin
     count: number
+    payoutBox: string,
+    payoutBoxNum:number
+    amount:number
 }

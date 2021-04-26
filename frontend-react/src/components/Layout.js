@@ -57,11 +57,7 @@ export default function Layout({ children }) {
   const location = useLocation()
 
   const menuItems = [
-    {
-      text: 'Bank Reports',
-      icon: <SubjectOutlined color="secondary" />,
-      path: '/bank'
-    },
+    
   ];
 
   return (

@@ -34,12 +34,13 @@ export default function Home() {
     }).then(res => res.json())
       .then(data => {
         setWithdrawCoins([]);
-        const { message, coins } = data
+        const { message, withdraw } = data
         if (message) {
           setError(message);
           return;
         }
-        setWithdrawCoins(coins)
+        console.log(withdraw)
+        setWithdrawCoins(withdraw)
       })
   }
 
@@ -79,13 +80,25 @@ export default function Home() {
         </h5>
       }
       {
-        withdrawCoins.map(withdrawCoin => <Typography
-          variant="h6"
-          color="textSecondary"
-          component="h2"
-        >
-          Type : {withdrawCoin.coin.type} - Amount : {withdrawCoin.coin.amount} - Count : {withdrawCoin.count}
-        </Typography>)
+        Object.keys(withdrawCoins).map(function (key, index) {
+          return (<Typography
+            variant="h6"
+            color="green"
+            component="h2"
+          >
+            Paybox : {key} will Pay : 
+
+            {withdrawCoins[key].map(itm => (<Typography
+              variant="h8"
+              color="textSecondary"
+              component="h4"
+            >
+
+              Count : {itm.count} Amount: {itm.amount}
+
+            </Typography>))}
+          </Typography>)
+        })
       }
     </Container>
   )
