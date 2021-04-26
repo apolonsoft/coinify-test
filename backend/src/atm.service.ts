@@ -95,7 +95,7 @@ export class AtmService implements OnApplicationBootstrap {
                 amount: 50,
                 type: CoinType.BANKNOTE,
                 remainingCount: 55,
-                payoutBox: '1: Notes',
+                payoutBox: 'Notes',
                 payoutBoxNum:1
 
             },
@@ -103,7 +103,7 @@ export class AtmService implements OnApplicationBootstrap {
                 amount: 20,
                 type: CoinType.COIN,
                 remainingCount: 100,
-                payoutBox: '2 : > 20mm',
+                payoutBox: 'COINS : > 20mm',
                 payoutBoxNum:2
 
             },
@@ -111,14 +111,14 @@ export class AtmService implements OnApplicationBootstrap {
                 amount: 10,
                 type: CoinType.COIN,
                 remainingCount: 150,
-                payoutBox: '3: <= 20mm',
+                payoutBox: 'COINS : <= 20mm',
                 payoutBoxNum:3
             },
             {
                 amount: 5,
                 type: CoinType.COIN,
                 remainingCount: 200,
-                payoutBox: '2 : > 20mm',
+                payoutBox: 'COINS : > 20mm',
                 payoutBoxNum:2
 
             },
@@ -126,7 +126,7 @@ export class AtmService implements OnApplicationBootstrap {
                 amount: 2,
                 type: CoinType.COIN,
                 remainingCount: 300,
-                payoutBox: '2 : > 20mm',
+                payoutBox: 'COINS : > 20mm',
                 payoutBoxNum:2
 
             },
@@ -134,7 +134,7 @@ export class AtmService implements OnApplicationBootstrap {
                 amount: 1,
                 type: CoinType.COIN,
                 remainingCount: 550,
-                payoutBox: '3: <= 20mm',
+                payoutBox: 'COINS : <= 20mm',
                 payoutBoxNum:3
 
             },
